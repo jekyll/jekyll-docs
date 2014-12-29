@@ -6,6 +6,10 @@ gemfile:
   - gemfiles/Gemfile.jekyll-edge
   - gemfiles/Gemfile.jekyll-latest
   - gemfiles/Gemfile.jekyll-github
+matrix:
+  allow_failures:
+    gemfile: gemfiles/Gemfile.jekyll-latest
+    gemfile: gemfiles/Gemfile.jekyll-github
 before_script: bundle update
 script: script/cibuild
 notifications:
