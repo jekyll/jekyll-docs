@@ -8,8 +8,8 @@ gemfile:
   - gemfiles/Gemfile.jekyll-github
 matrix:
   allow_failures:
-    gemfile: gemfiles/Gemfile.jekyll-latest
-    gemfile: gemfiles/Gemfile.jekyll-github
+    - gemfile: gemfiles/Gemfile.jekyll-latest
+    - gemfile: gemfiles/Gemfile.jekyll-github
 before_script: bundle update
 script: script/cibuild
 notifications:
