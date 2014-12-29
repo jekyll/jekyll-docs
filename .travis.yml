@@ -1,9 +1,7 @@
 language: ruby
 cache: bundler
 sudo: false
-rvm:
-- 2.1
-- 2.0
+rvm: 2.1
 gemfile:
   - gemfiles/Gemfile.jekyll-edge
   - gemfiles/Gemfile.jekyll-latest
