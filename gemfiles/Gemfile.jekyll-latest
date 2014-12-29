@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gemspec :path => '../jekyll-docs.gemspec'
+gemspec :path => '../'
 
 require 'json'
 require 'open-uri'
