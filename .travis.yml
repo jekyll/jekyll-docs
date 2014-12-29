@@ -4,10 +4,10 @@ sudo: false
 rvm:
 - 2.1
 - 2.0
-  gemfile:
-    - gemfiles/Gemfile.jekyll-edge
-    - gemfiles/Gemfile.jekyll-latest
-    - gemfiles/Gemfile.jekyll-github
+gemfile:
+  - gemfiles/Gemfile.jekyll-edge
+  - gemfiles/Gemfile.jekyll-latest
+  - gemfiles/Gemfile.jekyll-github
 before_script: bundle update
 script: script/cibuild
 notifications:
