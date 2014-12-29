@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -xe
+
+bundle exec jekyll docs &
+PASSED="$?"
+PID="$!"
+
+sleep 5
+jobs
+kill $PID
+
+exit $PASSED

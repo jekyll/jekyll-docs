@@ -1,0 +1,8 @@
+source 'https://rubygems.org'
+gemspec :path => '../'
+
+require 'json'
+require 'open-uri'
+jekyll_version = open('http://jekyllrb.com/latest_version.txt').read
+
+gem 'jekyll', jekyll_version
