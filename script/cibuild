@@ -3,9 +3,10 @@
 set -xe
 
 bundle exec jekyll docs &
-PID="$!"
 PASSED="$?"
+PID="$!"
 
+sleep 5
 jobs
 kill $PID
 
