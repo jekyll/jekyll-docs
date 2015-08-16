@@ -1,5 +1,5 @@
 module Jekyll
   module Docs
-    VERSION = '1.0.0-rc1 '
+    VERSION = '2.5.3'
   end
 end
