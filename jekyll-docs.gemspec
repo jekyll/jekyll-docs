@@ -13,6 +13,7 @@ Gem::Specification.new do |spec|
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").grep(%r{^(lib|site)/})
+  spec.files         = spec.files | `cd site && git ls-files -z`.split("\x0").map{|f| "site/#{f}"}
   spec.require_paths = ['lib']
 
   spec.add_development_dependency 'bundler', '~> 1.7'
