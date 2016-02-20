@@ -3,3 +3,4 @@ site/_site
 Gemfile.lock
 /site
 /jekyll
+/pkg
