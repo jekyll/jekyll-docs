@@ -1,34 +1,38 @@
-# Jekyll Docs
+## jekyll-docs
 
-Offline usage documentation for Jekyll. A copy of the jekyllrb.com website.
+This gem is how we ship the docs on jekyllrb.com to users who want local, offline access to the docs.
 
-## Installation
+### Installing
 
-Add this line to your application's Gemfile:
+Replace `<JEKYLL_VERSION>` with the version of Jekyll you wish to use (e.g. `3.1.2`) and run:
 
-```ruby
-gem 'jekyll-docs'
+```
+gem install jekyll-docs -v <JEKYLL_VERSION>
 ```
 
-And then execute:
+Or, add it to your `Gemfile`:
 
-    $ bundle
+```ruby
+gem 'jekyll-docs', '<JEKYLL_VERSION>'
+```
 
-Or install it yourself as:
+Then, run `bundle install`.
 
-    $ gem install jekyll-docs
+### Building
 
-## Usage
+```console
+$ export JEKYLL_VERSION=3.1.1 # (or whatever)
+$ bundle install
+$ bundle exec rake build
+```
 
-Nothing! Jekyll will automatically recognize the gem once it's installed.
-Just run `jekyll docs` from your command line and launch your browser at
-the address printed in your terminal. This is usually
-`http://127.0.0.1:4000`.
+Now you have it in `pkg/jekyll-docs-3.1.1.gem`.
 
-## Contributing
+### Releasing
 
-1. Fork it ( https://github.com/jekyll/jekyll-docs/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+Ensure the tag for the version is available on the `jekyll/jekyll` repo in the form of `vVERSION`, e.g. `v3.1.2`.
+
+```console
+$ export JEKYLL_VERSION=3.1.2
+$ bundle exec rake release
+```

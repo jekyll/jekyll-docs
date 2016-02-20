@@ -1,2 +1,3 @@
 #!/bin/bash
 bundle install -j8 $@
+bundle exec rake init

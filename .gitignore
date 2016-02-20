@@ -1,3 +1,5 @@
 site/_site
 .bundle
 Gemfile.lock
+/site
+/jekyll

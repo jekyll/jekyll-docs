@@ -1,4 +1,0 @@
-source 'https://rubygems.org'
-gemspec :path => '../'
-
-gem 'jekyll', github: 'jekyll/jekyll', branch: 'master'
