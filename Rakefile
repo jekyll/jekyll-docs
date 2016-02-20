@@ -18,7 +18,12 @@ end
 
 task :init do
   sh "git clone git://github.com/jekyll/jekyll.git jekyll" unless Dir.exist? "jekyll/.git"
-  Dir.chdir("jekyll") { sh "git checkout v#{version}" }
+  Dir.chdir("jekyll") do
+    sh "git checkout master"
+    sh "git pull origin master"
+    sh "git pull origin --tags"
+    sh "git checkout v#{version}"
+  end
   rm_rf "site"
   cp_r "jekyll/site", "site"
 end
