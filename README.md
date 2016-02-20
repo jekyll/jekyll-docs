@@ -18,6 +18,18 @@ gem 'jekyll-docs', '<JEKYLL_VERSION>'
 
 Then, run `bundle install`.
 
+### Usage
+
+Once installed, you have to ensure you're using the same version of Jekyll and jekyll-docs:
+
+```console
+$ jekyll _<JEKYLL_VERSION>_ docs
+$ # If you want Jekyll v3.1.2, you have to run:
+$ jekyll _3.1.2_ docs
+```
+
+:smile:
+
 ### Building
 
 ```console
