@@ -27,15 +27,11 @@ task :init do
   end
   Bundler.with_clean_env { sh "bundle install" }
 
-  rm_rf "staging"
   rm_rf "site"
-  cp_r "jekyll/site", "staging"
-
-  sh "jekyll build -s staging -d site"
+  sh "jekyll build -s jekyll/site -d site"
 end
 
 task :teardown do
-  rm_rf "staging"
   rm_rf "site"
   rm_rf "jekyll"
 end
