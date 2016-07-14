@@ -1,6 +1,4 @@
-require 'rubygems'
 require 'jekyll'
-require 'tmpdir'
 
 module JekyllDocs
   class DocsCommand < Jekyll::Command
@@ -20,17 +18,13 @@ module JekyllDocs
       end
 
       def process(opts)
-        Dir.mktmpdir do |dest_dir|
-          options = opts.merge({
-            "serving"     => true,
-            "watch"       => false,
-            "config"      => File.expand_path("../../site/_config.yml", __FILE__),
-            "source"      => File.expand_path("../../site", __FILE__),
-            "destination" => dest_dir
-          })
-          Jekyll::Commands::Build.process(options)
-          Jekyll::Commands::Serve.process(options)
-        end
+        options = opts.merge({
+          "serving"     => true,
+          "watch"       => false,
+          "destination" => File.expand_path("../../site", __FILE__),
+          "skip_initial_build" => true
+        })
+        Jekyll::Commands::Serve.process(options)
       end
     end
   end

@@ -1,5 +1,6 @@
 site/_site
 .bundle
+.sass-cache
 Gemfile.lock
 /site
 /jekyll
