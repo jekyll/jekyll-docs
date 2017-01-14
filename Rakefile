@@ -13,7 +13,7 @@ def gem_file
 end
 
 def version
-  ENV.fetch('JEKYLL_VERSION')
+  ENV.fetch("JEKYLL_VERSION")
 end
 
 task :init do
@@ -44,7 +44,7 @@ end
 
 desc "Release #{name} v#{version}"
 task :release => :build do
-  unless `git branch` =~ /^\* master$/
+  unless `git branch` =~ %r!^\* master$!
     puts "You must be on the master branch to release!"
     exit!
   end
