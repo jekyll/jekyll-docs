@@ -28,7 +28,7 @@ task :init do
   Bundler.with_clean_env { sh "bundle install" }
 
   rm_rf "site"
-  sh "jekyll build -s jekyll/site -d site"
+  sh "jekyll build -s jekyll/docs -d site"
 end
 
 task :teardown do
