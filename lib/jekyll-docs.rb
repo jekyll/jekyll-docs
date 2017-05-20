@@ -9,7 +9,7 @@ module JekyllDocs
           cmd.syntax "docs [options]"
           cmd.alias :d
 
-          cmd.option "port", "-P", "--port", "Port to listen on."
+          cmd.option "port", "-P [PORT]", "--port [PORT]", "Port to listen on."
 
           cmd.action do |_, opts|
             JekyllDocs::DocsCommand.process(opts)
