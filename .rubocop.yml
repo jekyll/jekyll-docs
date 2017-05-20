@@ -1,0 +1,12 @@
+inherit_gem:
+  jekyll: .rubocop.yml
+
+Metrics/LineLength:
+  Exclude:
+    - jekyll-docs.gemspec
+
+Style/Documentation:
+  Enabled: false
+
+Style/FileName:
+  Enabled: false
