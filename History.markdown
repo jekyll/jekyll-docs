@@ -6,3 +6,7 @@
 ### Bug Fixes
 
   * fixes jekyll/jekyll-docs#18 - jekyll docs -P <port_number> fails (#19)
+
+### Development Fixes
+
+  * add Rubocop for consistency (#16)
