@@ -49,3 +49,13 @@ $ export JEKYLL_VERSION=3.1.2
 $ script/bootstrap
 $ bundle exec rake release
 ```
+
+Made a mistake? You can release another version of jekyll-docs by running
+the following:
+
+```console
+$ export JEKYLL_VERSION=3.1.2
+$ export JEKYLL_DOCS_VERSION=${JEKYLL_VERSION}.1 # Increment .1 to .2 if this is your second fix, etc.
+$ script/bootstrap
+$ bundle exec rake release
+```
