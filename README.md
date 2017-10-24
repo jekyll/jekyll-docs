@@ -46,5 +46,6 @@ Ensure the tag for the version is available on the `jekyll/jekyll` repo in the f
 
 ```console
 $ export JEKYLL_VERSION=3.1.2
+$ script/bootstrap
 $ bundle exec rake release
 ```
