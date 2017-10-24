@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-docs"
-  spec.version       = ENV.fetch("JEKYLL_VERSION")
+  spec.version       = ENV.fetch("JEKYLL_DOCS_VERSION", ENV["JEKYLL_VERSION"])
   spec.authors       = ["Parker Moore"]
   spec.email         = ["parkrmoore@gmail.com"]
   spec.summary       = "Offline usage documentation for Jekyll."
