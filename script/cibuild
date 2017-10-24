@@ -2,12 +2,13 @@
 
 set -xe
 
+# Does it launch??
 bundle exec jekyll docs &
 PASSED="$?"
 PID="$!"
 
 sleep 5
 jobs
-kill $PID
+kill -INT $PID
 
 exit $PASSED
