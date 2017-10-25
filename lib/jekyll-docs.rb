@@ -1,4 +1,6 @@
-require 'jekyll'
+# frozen_string_literal: true
+
+require "jekyll"
 
 module JekyllDocs
   class DocsCommand < Jekyll::Command
@@ -19,10 +21,10 @@ module JekyllDocs
 
       def process(opts)
         options = opts.merge({
-          "serving"     => true,
-          "watch"       => false,
-          "destination" => File.expand_path("../../site", __FILE__),
-          "skip_initial_build" => true
+          "serving"            => true,
+          "watch"              => false,
+          "destination"        => File.expand_path("../../site", __FILE__),
+          "skip_initial_build" => true,
         })
         Jekyll::Commands::Serve.process(options)
       end

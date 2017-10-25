@@ -1,12 +1,8 @@
 inherit_gem:
   jekyll: .rubocop.yml
 
-Metrics/LineLength:
+AllCops:
+  TargetRubyVersion: 2.1
   Exclude:
-    - jekyll-docs.gemspec
-
-Style/Documentation:
-  Enabled: false
-
-Style/FileName:
-  Enabled: false
+    - jekyll/**/*
+    - vendor/**/*
