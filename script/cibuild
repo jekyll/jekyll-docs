@@ -2,6 +2,8 @@
 
 set -xe
 
+script/fmt
+
 # Does it launch??
 bundle exec jekyll docs &
 PASSED="$?"

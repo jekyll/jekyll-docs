@@ -1,4 +1,4 @@
-# coding: utf-8
+# frozen_string_literal: true
 
 jekyll_version = ENV.fetch("JEKYLL_VERSION")
 jekyll_docs_version = ENV.fetch("JEKYLL_DOCS_VERSION", jekyll_version)

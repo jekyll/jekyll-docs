@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 task :default => :init
 
 def name
-  "jekyll-docs".freeze
+  "jekyll-docs"
 end
 
 def gemspec_file
@@ -48,7 +50,7 @@ end
 
 desc "Release #{name} v#{jekyll_docs_version}"
 task :release => :build do
-  unless `git branch` =~ %r!^\* master$!
+  unless `git branch`.match?(%r!^\* master$!)
     puts "You must be on the master branch to release!"
     exit!
   end
