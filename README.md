@@ -20,6 +20,8 @@ Then, run `bundle install`.
 
 ### Usage
 
+:warning: You can not generate the documentation website in an existing Jekyll source folder.
+
 Once installed, you have to ensure you're using the same version of Jekyll and jekyll-docs:
 
 ```console
@@ -27,7 +29,6 @@ $ jekyll _<JEKYLL_VERSION>_ docs
 $ # If you want Jekyll v3.6.2, you have to run:
 $ jekyll _3.6.2_ docs
 ```
-
 :smile:
 
 ### Building
