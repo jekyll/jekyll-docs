@@ -6,3 +6,4 @@ AllCops:
   Exclude:
     - jekyll/**/*
     - vendor/**/*
+    - Rakefile
