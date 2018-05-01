@@ -23,7 +23,7 @@ module JekyllDocs
         options = opts.merge({
           "serving"            => true,
           "watch"              => false,
-          "destination"        => File.expand_path("../../site", __FILE__),
+          "destination"        => File.expand_path("../site", __dir__),
           "skip_initial_build" => true,
         })
         Jekyll::Commands::Serve.process(options)
