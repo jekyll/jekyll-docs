@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 gemspec
 
-gem "rubocop", "~> 0.51.0"
+gem "rubocop", "~> 0.55.0"
 
 if Dir.exist? "jekyll/docs"
   require "yaml"
