@@ -4,7 +4,7 @@ sudo: false
 rvm: 2.4
 env:
   global:
-    - JEKYLL_VERSION=3.6.2
+    - JEKYLL_VERSION=3.8.0
 before_script: bundle update
 script: script/cibuild
 notifications:
