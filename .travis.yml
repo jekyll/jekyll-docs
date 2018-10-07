@@ -1,10 +1,10 @@
 language: ruby
 cache: bundler
 sudo: false
-rvm: 2.4
+rvm: 2.5
 env:
   global:
-    - JEKYLL_VERSION=3.8.0
+    - JEKYLL_VERSION=3.8.4
 before_script: bundle update
 script: script/cibuild
 notifications:
