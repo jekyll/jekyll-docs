@@ -5,6 +5,8 @@ gemspec
 
 gem "rubocop", "~> 0.55.0"
 
+gem "kramdown-parser-gfm" if ENV["JEKYLL_VERSION"].to_s.start_with?("3.9.")
+
 if Dir.exist? "jekyll/docs"
   require "yaml"
   config = YAML.load_file "jekyll/docs/_config.yml"
